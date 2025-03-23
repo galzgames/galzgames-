@@ -104,7 +104,62 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Galz Games</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <ul>
+            <li><a href="inicio.html">inicio</a></li>
+            <li><a href="galeria.html">galeria</a></li>
+            <li><a href="musicas.html">musicas</a></li>
+            <li><a href="videos.html">videos</a></li>
+        </ul>
+    
+        <div class="center">
+            <img src="./img/album.png" alt="Album">
+            <h1>GALZ GAMES</h1>
+            <h2>RETRO GAMER DAY</h2>
+        </div>
+    
+        <div class="gif-container">
+            <img src="./img/animated1.gif" alt="GIF Animado 1">
+            <img src="./img/animated2.gif" alt="GIF Animado 2">
+        </div>
+    
+        <footer>
+            <div class="link-container">
+                <a href="https://www.youtube.com/@galzgames8113" target="_blank" rel="noopener noreferrer" class="link">
+                    <img src="./img/logo-youtube-4096.png" class="logo">
+                    <p>YOU TUBE</p>
+                </a>
+                <a href="https://kwai-video.com/u/@galzgames/Lq5Co9RJ" target="_blank" rel="noopener noreferrer" class="link">
+                    <img src="./img/kwai.png" class="logo">
+                    <p>KWAI</p>
+                </a>
+                <a href="https://www.instagram.com/galzgamesrgd/" target="_blank" rel="noopener noreferrer" class="link">
+                    <img src="./img/insta.png" class="logo">
+                    <p>INSTAGRAM</p>
+                </a>
+                <a href="https://chat.whatsapp.com/KINNj7pQ6zrIELRvAXGjec" target="_blank" rel="noopener noreferrer" class="link">
+                    <img src="./img/whats.png" class="logo">
+                    <p>whatsapp</p>
+                </a>
+            </div>
+            
+            <div class="center">
+                <audio controls autoplay loop class="center-audio">
+                    <source src="play time.mp3" type="audio/mp3">
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+            </div>
+        </footer>
+    </body>
+    </html>
     text-align: center;
 }
 
