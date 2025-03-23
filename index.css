@@ -152,3 +152,75 @@ footer {
     background-color: #0056b3;
 }
 
+.video-section {
+    padding: 20px;
+    background-color: rgba(248, 249, 250, 0.8); /* Fundo semi-transparente */
+    border-radius: 10px;
+    margin: 20px;
+    width: 80%;
+}
+
+.video-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: darkblue; /* Cor do título */
+}
+
+.video-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.video-section li {
+    margin: 10px 0;
+}
+
+.video-item {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 5px solid black; /* Adiciona borda preta */
+    border-radius: 10px; /* Adiciona cantos arredondados */
+}
+
+.music-section {
+    padding: 20px;
+    background-color: rgba(248, 249, 250, 0.8); /* Fundo semi-transparente */
+    border-radius: 10px;
+    margin: 20px;
+    width: 80%;
+}
+
+.music-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: darkblue; /* Cor do título */
+}
+
+.music-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.music-section li {
+    margin: 10px 0;
+}
+
+audio {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+    border: 5px solid black; /* Adiciona borda preta */
+    border-radius: 10px; /* Adiciona cantos arredondados */
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+    border: 5px solid black; /* Adiciona borda preta */
+    border-radius: 10px; /* Adiciona cantos arredondados */
+}
+
