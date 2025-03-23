@@ -1,21 +1,9 @@
 body {
-    color: white;
-    background-color: blue;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-body {
-    color: white;
-    background-color: blue;
     background-image: url('./img/back.jpg'); /* Caminho para a sua imagem de fundo */
     background-size: cover; /* Faz a imagem cobrir todo o fundo */
     background-position: center; /* Centraliza a imagem de fundo */
     background-repeat: no-repeat; /* Evita que a imagem se repita */
+    color: white; /* Cor do texto */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -93,76 +81,6 @@ footer {
     margin-bottom: -30px; /* Espaço entre a imagem e o texto */
 }
 
-body {
-    background-image: url('./img/back.jpg'); /* Caminho para a sua imagem de fundo */
-    background-size: cover; /* Faz a imagem cobrir todo o fundo */
-    background-position: center; /* Centraliza a imagem de fundo */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
-    color: white; /* Cor do texto */
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Galz Games</title>
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <ul>
-            <li><a href="inicio.html">inicio</a></li>
-            <li><a href="galeria.html">galeria</a></li>
-            <li><a href="musicas.html">musicas</a></li>
-            <li><a href="videos.html">videos</a></li>
-        </ul>
-    
-        <div class="center">
-            <img src="./img/album.png" alt="Album">
-            <h1>GALZ GAMES</h1>
-            <h2>RETRO GAMER DAY</h2>
-        </div>
-    
-        <div class="gif-container">
-            <img src="./img/animated1.gif" alt="GIF Animado 1">
-            <img src="./img/animated2.gif" alt="GIF Animado 2">
-        </div>
-    
-        <footer>
-            <div class="link-container">
-                <a href="https://www.youtube.com/@galzgames8113" target="_blank" rel="noopener noreferrer" class="link">
-                    <img src="./img/logo-youtube-4096.png" class="logo">
-                    <p>YOU TUBE</p>
-                </a>
-                <a href="https://kwai-video.com/u/@galzgames/Lq5Co9RJ" target="_blank" rel="noopener noreferrer" class="link">
-                    <img src="./img/kwai.png" class="logo">
-                    <p>KWAI</p>
-                </a>
-                <a href="https://www.instagram.com/galzgamesrgd/" target="_blank" rel="noopener noreferrer" class="link">
-                    <img src="./img/insta.png" class="logo">
-                    <p>INSTAGRAM</p>
-                </a>
-                <a href="https://chat.whatsapp.com/KINNj7pQ6zrIELRvAXGjec" target="_blank" rel="noopener noreferrer" class="link">
-                    <img src="./img/whats.png" class="logo">
-                    <p>whatsapp</p>
-                </a>
-            </div>
-            
-            <div class="center">
-                <audio controls autoplay loop class="center-audio">
-                    <source src="play time.mp3" type="audio/mp3">
-                    Seu navegador não suporta o elemento de áudio.
-                </audio>
-            </div>
-        </footer>
-    </body>
-    </html>
-    text-align: center;
-}
-
 .history-section {
     padding: 20px;
     background-color: rgba(248, 249, 250, 0.8); /* Fundo semi-transparente */
@@ -181,3 +99,56 @@ body {
     text-align: justify;
     color: darkgreen; /* Cor dos parágrafos */
 }
+
+.video-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.promo-video {
+    width: 80%; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    border: 2px solid black; /* Adiciona borda preta */
+    border-radius: 10px; /* Adiciona cantos arredondados */
+}
+
+.gif-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+}
+
+.left-gif, .right-gif {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    border: 2px solid black; /* Adiciona borda preta */
+    border-radius: 10px; /* Adiciona cantos arredondados */
+}
+
+.left-gif {
+    margin-left: 20px;
+}
+
+.right-gif {
+    margin-right: 20px;
+}
+
+.back-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+

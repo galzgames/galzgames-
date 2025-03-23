@@ -4,53 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Vídeos</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            background-image: url('./img/back.jpg'); /* Caminho para a sua imagem de fundo */
-            background-size: cover; /* Faz a imagem cobrir todo o fundo */
-            background-position: center; /* Centraliza a imagem de fundo */
-            background-repeat: no-repeat; /* Evita que a imagem se repita */
-            color: white; /* Cor do texto */
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        .video-section {
-            padding: 20px;
-            background-color: rgba(248, 249, 250, 0.8); /* Fundo semi-transparente */
-            border-radius: 10px;
-            margin: 20px;
-            width: 80%;
-        }
-        .video-section h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: darkblue; /* Cor do título */
-        }
-        .video-section ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .video-section li {
-            margin: 10px 0;
-        }
-        .video-section video {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            border: 5px solid black; /* Adiciona borda preta */
-            border-radius: 10px; /* Adiciona cantos arredondados */
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <button onclick="window.history.back();" class="back-button">Voltar</button>
     <div class="video-section">
         <h2>Veja os Vídeos do Evento</h2>
         <ul>

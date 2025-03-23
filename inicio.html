@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>História dos Videogames</title>
+    <title>Início</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="index.css"> <!-- Certifique-se de que o caminho esteja correto -->
     <style>
@@ -34,6 +34,33 @@
     </style>
 </head>
 <body>
+    <button onclick="window.history.back();" class="back-button">Voltar</button>
+    <ul>
+        <li><a href="inicio.html">inicio</a></li>
+        <li><a href="galeria.html">galeria</a></li>
+        <li><a href="musicas.html">musicas</a></li>
+        <li><a href="videos.html">videos</a></li>
+    </ul>
+
+    <div class="center">
+        <img src="./img/album.png" alt="Album">
+        <h1>GALZ GAMES</h1>
+        <h2>RETRO GAMER DAY</h2>
+    </div>
+
+    <!-- Adicionando o vídeo MP4 com autoplay -->
+    <div class="video-container">
+        <video autoplay loop muted class="promo-video">
+            <source src="./video/promo.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+    </div>
+
+    <div class="gif-container">
+        <img src="./img/animated1.gif" alt="GIF Animado 1" class="left-gif">
+        <img src="./img/animated2.gif" alt="GIF Animado 2" class="right-gif">
+    </div>
+
     <div class="container">
         <div class="history-section">
             <h2>História dos Videogames</h2>
@@ -70,6 +97,34 @@
             </p>
         </div>
     </div>
+
+    <footer>
+        <div class="link-container">
+            <a href="https://www.youtube.com/@galzgames8113" target="_blank" rel="noopener noreferrer" class="link">
+                <img src="./img/logo-youtube-4096.png" class="logo">
+                <p>YOU TUBE</p>
+            </a>
+            <a href="https://kwai-video.com/u/@galzgames/Lq5Co9RJ" target="_blank" rel="noopener noreferrer" class="link">
+                <img src="./img/kwai.png" class="logo">
+                <p>KWAI</p>
+            </a>
+            <a href="https://www.instagram.com/galzgamesrgd/" target="_blank" rel="noopener noreferrer" class="link">
+                <img src="./img/insta.png" class="logo">
+                <p>INSTAGRAM</p>
+            </a>
+            <a href="https://chat.whatsapp.com/KINNj7pQ6zrIELRvAXGjec" target="_blank" rel="noopener noreferrer" class="link">
+                <img src="./img/whats.png" class="logo">
+                <p>whatsapp</p>
+            </a>
+        </div>
+        
+        <div class="center">
+            <audio controls autoplay loop class="center-audio">
+                <source src="play time.mp3" type="audio/mp3">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
