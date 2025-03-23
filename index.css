@@ -1,0 +1,128 @@
+body {
+    color: white;
+    background-color: blue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+body {
+    color: white;
+    background-color: blue;
+    background-image: url('./img/back.jpg'); /* Caminho para a sua imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: whitesmoke;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 30px;
+    margin: 0;
+    width: 100%;
+}
+
+img {
+    padding: 20px;
+    width: 250px;
+    height: auto;
+    max-width: 100%;
+}
+
+h1, h2 {
+    color: black;
+    margin: 20px 0;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px; /* Espaço entre os itens */
+    padding: 50px;
+}
+
+.center {
+    text-align: center;
+}
+
+.audio-container {
+    text-align: center;
+}
+
+.link-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaço entre os links */
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    width: 50px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    margin-bottom: -30px; /* Espaço entre a imagem e o texto */
+}
+
+body {
+    background-image: url('./img/back.jpg'); /* Caminho para a sua imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    color: white; /* Cor do texto */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.history-section {
+    padding: 20px;
+    background-color: rgba(248, 249, 250, 0.8); /* Fundo semi-transparente */
+    border-radius: 10px;
+    margin: 20px;
+    color: black; /* Cor do texto na seção de história */
+}
+
+.history-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: darkblue; /* Cor do título */
+}
+
+.history-section p {
+    text-align: justify;
+    color: darkgreen; /* Cor dos parágrafos */
+}
