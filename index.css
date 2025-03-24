@@ -24,10 +24,8 @@ a:hover {
 }
 
 ul {
-    display: flex;
-    justify-content: space-around;
     list-style: none;
-    padding: 30px;
+    padding: 0;
     margin: 0;
     width: 100%;
 }
@@ -124,7 +122,7 @@ footer {
 .left-gif, .right-gif {
     width: 100px; /* Ajuste o tamanho conforme necessário */
     height: auto;
-    border: 2px solid black; /* Adiciona borda preta */
+    border: none; /* Adiciona borda preta */
     border-radius: 10px; /* Adiciona cantos arredondados */
 }
 
@@ -205,12 +203,12 @@ footer {
 }
 
 .music-section li {
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 audio {
-    width: 100%;
-    max-width: 600px;
+    width: 80%;
+    max-width: 100%;
     display: block;
     margin: 0 auto;
     border: 5px solid black; /* Adiciona borda preta */
