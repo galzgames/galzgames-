@@ -25,7 +25,7 @@ a:hover {
 
 ul {
     list-style: none;
-    padding: 0;
+    padding: 10;
     margin: 0;
     width: 100%;
 }
@@ -76,7 +76,7 @@ footer {
 .logo {
     width: 50px; /* Ajuste o tamanho conforme necessário */
     height: auto;
-    margin-bottom: -30px; /* Espaço entre a imagem e o texto */
+    margin-bottom: -10px; /* Espaço entre a imagem e o texto */
 }
 
 .history-section {
