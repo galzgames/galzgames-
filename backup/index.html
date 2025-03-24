@@ -6,18 +6,101 @@
     <title>Galz Games</title>
     <link rel="stylesheet" href="index.css">
     <style>
+        body {
+            background-image: url('./img/back2.avif'); /* Caminho para a sua imagem de fundo */
+            background-size: cover; /* Faz a imagem cobrir todo o fundo */
+            background-position: center; /* Centraliza a imagem de fundo */
+            background-repeat: no-repeat; /* Evita que a imagem se repita */
+            color: rgb(41, 39, 134); /* Cor do texto */
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
         .nav-menu {
             display: flex;
             justify-content: center;
             list-style: none;
             padding: 0;
+            flex-wrap: wrap;
+            margin: 20px 0;
         }
         .nav-menu li {
-            margin: 0 15px;
+            margin: 10px 15px;
         }
         .nav-menu a {
             text-decoration: none;
             color: white;
+            font-size: 18px;
+        }
+
+        .center img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        .gif-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        .gif-container img {
+            max-width: 45%;
+            height: auto;
+            margin: 10px 0;
+        }
+
+        .footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+        }
+        .footer .social-icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px; /* Espaço entre os itens */
+            margin: 10px 0;
+        }
+        .footer .social-icons a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer .social-icons a:hover {
+            color: #007bff;
+        }
+        .footer p {
+            margin: 5px 0;
+            font-size: 12px;
+        }
+
+        @media (max-width: 600px) {
+            .nav-menu li {
+                margin: 5px 10px;
+            }
+            .nav-menu a {
+                font-size: 16px;
+            }
+            .gif-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .gif-container img {
+                max-width: 80%;
+            }
+            .footer .social-icons {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -55,7 +138,7 @@
                 <img src="./img/insta.png" alt="Instagram" class="logo" width="30" height="30">
             </a>
         </div>
-<p>&copy; 2025 Galz Games. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Galz Games. Todos os direitos reservados.</p>
         <p>Desenvolvido por Galz Games</p>
     </footer>
 </body>
