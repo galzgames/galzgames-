@@ -1,11 +1,11 @@
 body {
-    background-image: url('./img/back.jpg'); /* Caminho para a sua imagem de fundo */
+    background-image: url('./img/back2.avif'); /* Caminho para a sua imagem de fundo */
     background-size: cover; /* Faz a imagem cobrir todo o fundo */
     background-position: center; /* Centraliza a imagem de fundo */
     background-repeat: no-repeat; /* Evita que a imagem se repita */
-    color: white; /* Cor do texto */
+    color: rgb(41, 39, 134); /* Cor do texto */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 0;
+    margin: 250px;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -14,32 +14,32 @@ body {
 }
 
 a {
-    color: whitesmoke;
+    color: rgb(83, 135, 15);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: whitesmoke;
+    color: rgb(0, 0, 0);
 }
 
 ul {
     list-style: none;
-    padding: 0;
+    padding: 150px;
     margin: 0;
     width: 100%;
 }
 
 img {
-    padding: 20px;
+    padding: 0px;
     width: 250px;
     height: auto;
     max-width: 100%;
 }
 
 h1, h2 {
-    color: black;
-    margin: 20px 0;
+    color: rgb(28, 100, 159);
+    margin: 10px 0;
 }
 
 footer {
