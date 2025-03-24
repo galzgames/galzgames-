@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Vídeos</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <div id="aplayer"></div>
+    <button onclick="window.history.back();" class="back-button">Voltar</button>
+    <div class="video-section">
+        <h2>Veja os Vídeos do Evento</h2>
+        <ul>
+            <li>
+                <video controls class="video-item">
+                    <source src="./videos/promo.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+                <p>retro gamer day</p>
+            </li>
+            <li>
+                <video controls class="video-item">
+                    <source src="./videos/rgd01.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+                <p>evento rgd2024</p>
+            </li>
+            <li>
+                <video controls class="video-item">
+                    <source src="./videos/galz na jampageek.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+                <p>galz games na jampa geek</p>
+            </li>
+            <!-- Adicione mais vídeos conforme necessário -->
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

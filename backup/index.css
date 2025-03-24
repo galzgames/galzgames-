@@ -1,0 +1,224 @@
+body {
+    background-image: url('./img/back.jpg'); /* Caminho para a sua imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    color: white; /* Cor do texto */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: whitesmoke;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+img {
+    padding: 20px;
+    width: 250px;
+    height: auto;
+    max-width: 100%;
+}
+
+h1, h2 {
+    color: black;
+    margin: 20px 0;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px; /* Espaço entre os itens */
+    padding: 50px;
+}
+
+.center {
+    text-align: center;
+}
+
+.audio-container {
+    text-align: center;
+}
+
+.link-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaço entre os links */
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    width: 50px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    margin-bottom: -30px; /* Espaço entre a imagem e o texto */
+}
+
+.history-section {
+    padding: 20px;
+    background-color: rgba(248, 249, 250, 0.8); /* Fundo semi-transparente */
+    border-radius: 10px;
+    margin: 20px;
+    color: black; /* Cor do texto na seção de história */
+}
+
+.history-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: darkblue; /* Cor do título */
+}
+
+.history-section p {
+    text-align: justify;
+    color: darkgreen; /* Cor dos parágrafos */
+}
+
+.video-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.promo-video {
+    width: 80%; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    border: 2px solid black; /* Adiciona borda preta */
+    border-radius: 10px; /* Adiciona cantos arredondados */
+}
+
+.gif-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+}
+
+.left-gif, .right-gif {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    border: none; /* Adiciona borda preta */
+    border-radius: 10px; /* Adiciona cantos arredondados */
+}
+
+.left-gif {
+    margin-left: 20px;
+}
+
+.right-gif {
+    margin-right: 20px;
+}
+
+.back-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+.video-section {
+    padding: 20px;
+    background-color: rgba(248, 249, 250, 0.8); /* Fundo semi-transparente */
+    border-radius: 10px;
+    margin: 20px;
+    width: 80%;
+}
+
+.video-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: darkblue; /* Cor do título */
+}
+
+.video-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.video-section li {
+    margin: 10px 0;
+}
+
+.video-item {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 5px solid black; /* Adiciona borda preta */
+    border-radius: 10px; /* Adiciona cantos arredondados */
+}
+
+.music-section {
+    padding: 20px;
+    background-color: rgba(248, 249, 250, 0.8); /* Fundo semi-transparente */
+    border-radius: 10px;
+    margin: 20px;
+    width: 80%;
+}
+
+.music-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: darkblue; /* Cor do título */
+}
+
+.music-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.music-section li {
+    margin: 20px 0;
+}
+
+audio {
+    width: 80%;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    border: 5px solid black; /* Adiciona borda preta */
+    border-radius: 10px; /* Adiciona cantos arredondados */
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+    border: 5px solid black; /* Adiciona borda preta */
+    border-radius: 10px; /* Adiciona cantos arredondados */
+}
+
