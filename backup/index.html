@@ -18,7 +18,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-align: center;text-shadow: 2px 2px 3px rgb(161, 221, 241); /* Adiciona borda ao texto */
+            text-align: center;
+            text-shadow: 2px 2px 3px rgb(161, 221, 241); /* Adiciona borda ao texto */
         }
 
         .nav-menu {
@@ -27,7 +28,7 @@
             list-style: none;
             padding: 0;
             flex-wrap: wrap;
-            margin: 20px 0; /* Aproxima o menu da logo */
+            margin: 20px 20; /* Aproxima o menu da logo */
         }
         .nav-menu li {
             margin: 0px 25px;
@@ -96,15 +97,19 @@
                 font-size: 12px;
             }
             .gif-container {
-                flex-direction: column;
-                align-items: center;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
             }
             .gif-container img {
-                max-width: 80%;
+                max-width: 45%;
+                height: auto;
+                margin: 10px;
             }
             .footer .social-icons {
-                flex-direction: column;
-                align-items: center;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 80%;
             }
         }
     </style>
