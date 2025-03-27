@@ -31,12 +31,12 @@
             margin: 20px 20; /* Aproxima o menu da logo */
         }
         .nav-menu li {
-            margin: 0px 25px;
+            margin: 0px 15px;
         }
         .nav-menu a {
             text-decoration: none;
             color: rgb(141, 218, 247);
-            font-size: 18px;
+            font-size: 12px;
             text-shadow: 1px 1px 2px rgb(161, 221, 241); /* Adiciona borda ao texto */
         }
 
@@ -57,10 +57,20 @@
             padding: 20px;
             flex-wrap: wrap;
         }
-        .gif-container img {
-            max-width: 45%;
+        .left-gif, .center-gif, .right-gif {
+            width: 100px; /* Ajuste o tamanho conforme necessário */
             height: auto;
-            margin: 10px 0;
+            border: none; /* Remove borda */
+            border-radius: 10px; /* Adiciona cantos arredondados */
+        }
+        .left-gif {
+            margin-left: 20px;
+        }
+        .center-gif {
+            margin: 0 auto; /* Centraliza horizontalmente */
+        }
+        .right-gif {
+            margin-right: 20px;
         }
 
         .footer {
@@ -91,10 +101,10 @@
 
         @media (max-width: 600px) {
             .nav-menu li {
-                margin: 30px 10px;
+                margin: 2px 10px;
             }
             .nav-menu a {
-                font-size: 12px;
+                font-size: 10px;
             }
             .gif-container {
                 flex-direction: row;
@@ -121,6 +131,7 @@
         <li><a href="musicas.html">MÚSICAS</a></li>
         <li><a href="videos.html">VÍDEOS</a></li>
         <li><a href="pesquisa.html">PESQUISA</a></li>
+        <li><a href="inscrissoes.html">INSCRIÇÕES</a></li>
     </ul>
 
     <div class="center">
@@ -131,6 +142,7 @@
 
     <div class="gif-container">
         <img src="./img/left-gif.gif" alt="Left GIF" class="left-gif">
+        <img src="./img/center-gif.gif" alt="Center GIF" class="center-gif">
         <img src="./img/right-gif.gif" alt="Right GIF" class="right-gif">
     </div>
 
@@ -152,5 +164,11 @@
         <p>&copy; 2025 Galz Games. Todos os direitos reservados.</p>
         <p>Desenvolvido por Galz Games</p>
     </footer>
+
+    <!-- Música com loop infinito -->
+    <audio autoplay loop controls>
+        <source src="./music/background.mp3" type="audio/mp3">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
 </body>
 </html>

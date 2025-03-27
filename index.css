@@ -114,20 +114,25 @@ footer {
 
 .gif-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Garante que os GIFs fiquem espaçados */
+    align-items: center; /* Alinha os GIFs verticalmente */
     width: 100%;
     padding: 20px;
 }
 
-.left-gif, .right-gif {
+.left-gif, .center-gif, .right-gif {
     width: 100px; /* Ajuste o tamanho conforme necessário */
     height: auto;
-    border: none; /* Adiciona borda preta */
+    border: none; /* Remove borda */
     border-radius: 10px; /* Adiciona cantos arredondados */
 }
 
 .left-gif {
     margin-left: 20px;
+}
+
+.center-gif {
+    margin: 0 auto; /* Centraliza horizontalmente */
 }
 
 .right-gif {
