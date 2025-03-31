@@ -33,6 +33,19 @@
             height: 600px;
             border: none;
         }
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: rgb(41, 39, 134);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: rgb(31, 29, 124);
+        }
     </style>
 </head>
 <body>
@@ -44,3 +57,6 @@
         <h2>Torneio LoL Wr</h2>
         <iframe src="https://forms.gle/WezK9czxbPztftms6"></iframe>
     </div>
+    <button class="back-button" onclick="window.history.back();">Voltar</button>
+</body>
+</html>

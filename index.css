@@ -55,6 +55,11 @@ footer {
     text-align: center;
 }
 
+.center img {
+    border-radius: 50%; /* Define bordas arredondadas */
+    border: none; /* Adiciona uma borda ao redor da imagem (opcional) */
+}
+
 .audio-container {
     text-align: center;
 }
@@ -132,6 +137,10 @@ footer {
 }
 
 .center-gif {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    border: none; /* Remove borda */
+    border-radius: 10px; /* Adiciona cantos arredondados */
     margin: 0 auto; /* Centraliza horizontalmente */
 }
 
@@ -149,6 +158,8 @@ footer {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
 }
 
 .back-button:hover {
@@ -225,5 +236,53 @@ audio {
     height: auto;
     border: 5px solid black; /* Adiciona borda preta */
     border-radius: 10px; /* Adiciona cantos arredondados */
+}
+
+.sponsors {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sponsors h2 {
+    font-size: 24px;
+    color: rgb(41, 39, 134); /* Cor do título */
+    margin-bottom: 20px;
+}
+
+.sponsor-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os ícones quebrem linha */
+    gap: 20px; /* Espaçamento entre os ícones */
+}
+
+.sponsor-logo {
+    width: 100px; /* Tamanho dos ícones */
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.sponsor-logo:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: rgb(141, 218, 247); /* Cor padrão */
+    font-size: 12px;
+    text-shadow: 1px 1px 2px rgb(161, 221, 241); /* Adiciona borda ao texto */
+    transition: color 0.3s ease; /* Suaviza a transição de cor */
+}
+
+.nav-menu a:hover {
+    color: rgb(128, 255, 105); /* Cor ao passar o mouse (rosa, por exemplo) */
 }
 
