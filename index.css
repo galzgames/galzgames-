@@ -274,6 +274,42 @@ audio {
     transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
 }
 
+.supporters {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.supporters h2 {
+    font-size: 24px;
+    color: rgb(41, 39, 134); /* Cor do título */
+    margin-bottom: 20px;
+}
+
+.supporter-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os logos quebrem linha */
+    gap: 20px; /* Espaçamento entre os logos */
+}
+
+.supporter-logo {
+    width: 100px; /* Tamanho dos logos */
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.supporter-logo:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
 .nav-menu a {
     text-decoration: none;
     color: rgb(141, 218, 247); /* Cor padrão */
