@@ -310,6 +310,20 @@ audio {
     transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
 }
 
+.sponsor-logo, .supporter-logo {
+    width: 100px; /* Define um tamanho fixo para todas as imagens */
+    height: 100px; /* Define a altura fixa */
+    object-fit: cover; /* Garante que a imagem se ajuste ao tamanho sem distorção */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza o movimento e a sombra */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra leve */
+}
+
+.sponsor-logo:hover, .supporter-logo:hover {
+    transform: scale(1.1) translateY(-5px); /* Aumenta o tamanho e move a imagem para cima */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Aumenta a sombra ao passar o mouse */
+}
+
 .nav-menu a {
     text-decoration: none;
     color: rgb(141, 218, 247); /* Cor padrão */
