@@ -143,15 +143,33 @@
             background-color: #0056b3;
         }
     </style>
+
+    <!-- Firebase App (necessário para inicializar o Firebase) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+
+    <!-- Firebase Database (necessário para usar o Realtime Database) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
 </head>
 <body>
+    <!-- Verifica se o usuário está autenticado -->
     <script>
-        // Verifica se o usuário está autenticado
         const isAuthenticated = localStorage.getItem('isAuthenticated');
 
         // Se o usuário não estiver autenticado, redireciona para login.html
         if (!isAuthenticated) {
             window.location.href = "login.html";
+        }
+
+        // Solicita o nome do usuário ao carregar a página, se ainda não estiver definido
+        let userName = localStorage.getItem('userName');
+        if (!userName) {
+            userName = prompt("Digite seu nome para participar do chat:");
+            if (userName) {
+                localStorage.setItem('userName', userName);
+            } else {
+                alert("Você precisa inserir um nome para participar do chat.");
+                window.location.reload();
+            }
         }
 
         function logout() {
@@ -187,6 +205,78 @@
         <img src="./img/sonic.gif" alt="Center GIF" class="center-gif">
         <img src="./img/right-gif.gif" alt="Right GIF" class="right-gif">
     </div>
+
+    <div id="chat-container">
+        <h2>Chat em Tempo Real</h2>
+        <div id="chat-messages"></div>
+        <form id="chat-form">
+            <input type="text" id="chat-input" placeholder="Digite sua mensagem..." required>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        // Configuração do Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyCzhLhln9AHwtnbyImmzlA8rzYEqZKwsDM",
+            authDomain: "galz-games-chat.firebaseapp.com",
+            databaseURL: "https://galz-games-chat-default-rtdb.firebaseio.com/",
+            projectId: "galz-games-chat",
+            storageBucket: "galz-games-chat.appspot.com",
+            messagingSenderId: "1052839458559",
+            appId: "1:1052839458559:web:4979aff89169f16e727eca"
+        };
+
+        // Inicializa o Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Referência ao Realtime Database
+        const db = firebase.database().ref("messages");
+
+        // Exibe mensagens em tempo real
+        db.on("child_added", (snapshot) => {
+            const message = snapshot.val();
+            if (!message) {
+                console.error("Nenhuma mensagem encontrada.");
+                return;
+            }
+
+            console.log("Mensagem recebida:", message);
+
+            const messageDiv = document.createElement("div");
+            messageDiv.textContent = `${message.user}: ${message.text}`;
+            document.getElementById("chat-messages").appendChild(messageDiv);
+
+            // Rola para a última mensagem
+            const chatMessages = document.getElementById("chat-messages");
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        });
+
+        // Envia mensagens
+        document.getElementById("chat-form").addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const chatInput = document.getElementById("chat-input");
+            const message = chatInput.value;
+
+            if (message.trim() === "") {
+                console.error("Mensagem vazia não pode ser enviada.");
+                return;
+            }
+
+            // Envia a mensagem com o nome do usuário
+            db.push({
+                user: localStorage.getItem('userName') || "Anônimo", // Nome do usuário armazenado no localStorage
+                text: message,
+            }).then(() => {
+                console.log("Mensagem enviada:", message);
+            }).catch((error) => {
+                console.error("Erro ao enviar mensagem:", error);
+            });
+
+            chatInput.value = ""; // Limpa o campo de entrada
+        });
+    </script>
     
     <footer class="footer">
         <div class="social-icons">
