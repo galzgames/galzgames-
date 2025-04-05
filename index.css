@@ -377,16 +377,22 @@ audio {
     overflow-y: auto;
     margin-bottom: 10px;
     padding: 10px;
-    background-color: #1a1a1a;
+    background-color: #1a1a1a; /* Fundo escuro */
     border-radius: 5px;
+    color: white; /* Fonte branca */
+    font-family: Arial, sans-serif;
 }
 #chat-messages div {
     margin-bottom: 10px;
     padding: 5px;
     border-radius: 5px;
-    background-color: #007bff;
-    color: white;
+    background-color: #007bff; /* Fundo das mensagens */
+    color: white; /* Texto branco */
     text-align: left;
+}
+#chat-messages .user-name {
+    font-weight: bold;
+    color: white; /* Cor padrão para o nome do usuário */
 }
 #chat-form {
     display: flex;
@@ -411,6 +417,59 @@ audio {
 #chat-form button:hover {
     background-color: #0056b3;
 }
+
+// Função para gerar uma cor aleatória
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+// Objeto para armazenar cores aleatórias para cada usuário
+const userColors = {};
+
+// Exibe mensagens em tempo real
+db.on("child_added", (snapshot) => {
+    const message = snapshot.val();
+    if (!message) {
+        console.error("Nenhuma mensagem encontrada.");
+        return;
+    }
+
+    console.log("Mensagem recebida:", message);
+
+    // Define uma cor aleatória para o usuário, se ainda não tiver uma
+    if (!userColors[message.user]) {
+        userColors[message.user] = getRandomColor();
+    }
+
+    // Cria o elemento da mensagem
+    const messageDiv = document.createElement("div");
+
+    // Adiciona o nome do usuário com a cor aleatória
+    const userNameSpan = document.createElement("span");
+    userNameSpan.textContent = `${message.user}: `;
+    userNameSpan.style.color = userColors[message.user];
+    userNameSpan.classList.add("user-name");
+
+    // Adiciona o texto da mensagem
+    const messageTextSpan = document.createElement("span");
+    messageTextSpan.textContent = message.text;
+
+    // Adiciona os elementos ao contêiner da mensagem
+    messageDiv.appendChild(userNameSpan);
+    messageDiv.appendChild(messageTextSpan);
+
+    // Adiciona a mensagem ao contêiner de mensagens
+    document.getElementById("chat-messages").appendChild(messageDiv);
+
+    // Rola para a última mensagem
+    const chatMessages = document.getElementById("chat-messages");
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+});
 
 
 
