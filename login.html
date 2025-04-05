@@ -25,9 +25,21 @@
         .login-container {
             text-align: center;
             background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
-            padding: 20px;
-            border-radius: 10px;
+            padding: 50px; /* Aumenta o espaçamento interno */
+            border-radius: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona sombra */
+            width: 90%; /* Garante que ocupe toda a largura disponível */
+            max-width: 500px; /* Define uma largura máxima maior */
+            margin: 0 auto; /* Centraliza horizontalmente */
+        }
+        input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
         }
         button {
             padding: 10px 20px;
@@ -37,7 +49,7 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
-            margin-top: 20px;
+            margin-top: 10px;
             transition: background-color 0.3s ease; /* Suaviza a transição de cor no hover */
         }
         button:hover {
@@ -46,14 +58,61 @@
         h1 {
             margin-bottom: 20px;
             font-size: 24px;
-            transition: color 0.3s ease; /* Suaviza a transição de cores */
+        }
+        .error, .success {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .error {
+            color: red;
+        }
+        .success {
+            color: green;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .button-container img {
+            width: 50px; /* Ajuste o tamanho da logo */
+            height: 50px;
+            border-radius: 50%; /* Torna a imagem circular */
+        }
+        .button-container button {
+            flex: 1; /* Faz o botão ocupar o espaço restante */
+            margin: 0 10px; /* Espaçamento entre os elementos */
         }
     </style>
 </head>
 <body>
     <div class="login-container">
         <h1 id="dynamic-title">Bem-vindo ao Galz Games</h1>
-        <button id="google-login-button">Login com o Google</button>
+
+        <!-- Formulário de login manual -->
+        <form id="manual-login-form">
+            <input type="text" id="username" placeholder="Usuário" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+        <p class="error" id="error-message"></p>
+
+        <!-- Formulário de cadastro -->
+        <form id="register-form">
+            <input type="email" id="register-email" placeholder="E-mail" required>
+            <input type="password" id="register-password" placeholder="Senha" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <p class="success" id="success-message"></p>
+        <p class="error" id="register-error-message"></p>
+
+        <!-- Botão de login com o Google com logos -->
+        <div class="button-container">
+            <img src="./img/album.png" alt="Logo Esquerda"> <!-- Caminho para a logo da esquerda -->
+            <button id="google-login-button">Login com o Google</button>
+            <img src="./img/retro gamer day.jpeg" alt="Logo Direita"> <!-- Caminho para a logo da direita -->
+        </div>
     </div>
 
     <script>
@@ -62,7 +121,7 @@
             apiKey: "AIzaSyCzhLhln9AHwtnbyImmzlA8rzYEqZKwsDM",
             authDomain: "galz-games-chat.firebaseapp.com",
             projectId: "galz-games-chat",
-            storageBucket: "galz-games-chat",
+            storageBucket: "galz-games-chat.appspot.com",
             messagingSenderId: "1052839458559",
             appId: "1:1052839458559:web:4979aff89169f16e727eca"
         };
@@ -70,7 +129,62 @@
         // Inicializa o Firebase
         firebase.initializeApp(firebaseConfig);
 
-        // Configuração do botão de login com o Google
+        // Login manual com Firebase Authentication
+        document.getElementById('manual-login-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita o envio do formulário
+
+            const email = document.getElementById('username').value; // Use o campo de e-mail como nome de usuário
+            const password = document.getElementById('password').value;
+
+            firebase.auth().signInWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                    // Login bem-sucedido
+                    const user = userCredential.user;
+                    console.log('Usuário logado:', user);
+
+                    // Salva o estado de autenticação no localStorage
+                    localStorage.setItem('isAuthenticated', true);
+
+                    // Redireciona para a página principal
+                    window.location.href = "index.html";
+                })
+                .catch((error) => {
+                    // Exibe mensagem de erro
+                    document.getElementById('error-message').textContent = "Usuário ou senha inválidos!";
+                    console.error('Erro ao fazer login:', error);
+                });
+        });
+
+        // Cadastro de novo usuário
+        document.getElementById('register-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const email = document.getElementById('register-email').value;
+            const password = document.getElementById('register-password').value;
+
+            firebase.auth().createUserWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                    // Usuário cadastrado com sucesso
+                    const user = userCredential.user;
+                    document.getElementById('success-message').textContent = "Usuário cadastrado com sucesso!";
+                    document.getElementById('register-error-message').textContent = "";
+
+                    // Opcional: Limpa os campos do formulário após o cadastro
+                    document.getElementById('register-email').value = "";
+                    document.getElementById('register-password').value = "";
+                })
+                .catch((error) => {
+                    // Trata erros de cadastro
+                    if (error.code === "auth/email-already-in-use") {
+                        document.getElementById('register-error-message').textContent = "Este e-mail já está em uso. Tente outro.";
+                    } else {
+                        document.getElementById('register-error-message').textContent = error.message;
+                    }
+                    document.getElementById('success-message').textContent = "";
+                });
+        });
+
+        // Login com o Google
         const googleLoginButton = document.getElementById('google-login-button');
 
         googleLoginButton.addEventListener('click', () => {
@@ -110,11 +224,6 @@
             const title = document.getElementById('dynamic-title');
             title.style.color = getRandomColor();
         }, 1000); // Altera a cor do título a cada 1 segundo
-
-        function logout() {
-            localStorage.removeItem('isAuthenticated');
-            window.location.href = "login.html";
-        }
     </script>
 </body>
 </html>
