@@ -145,6 +145,23 @@
     </style>
 </head>
 <body>
+    <script>
+        // Verifica se o usuário está autenticado
+        const isAuthenticated = localStorage.getItem('isAuthenticated');
+
+        // Se o usuário não estiver autenticado, redireciona para login.html
+        if (!isAuthenticated) {
+            window.location.href = "login.html";
+        }
+
+        function logout() {
+            localStorage.removeItem('isAuthenticated');
+            window.location.href = "login.html";
+        }
+    </script>
+
+    <button onclick="logout()">Logout</button>
+
     <ul class="nav-menu">
         <li><a href="inicio.html">INICIO</a></li>
         <li><a href="galeria.html">GALERIA</a></li>

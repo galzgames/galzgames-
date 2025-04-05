@@ -82,8 +82,11 @@
                     const user = result.user;
                     console.log('Usuário logado:', user);
 
+                    // Salva o estado de autenticação no localStorage
+                    localStorage.setItem('isAuthenticated', true);
+
                     // Redireciona para a página principal
-                    window.location.href = "../index.html";
+                    window.location.href = "index.html";
                 })
                 .catch((error) => {
                     // Ocorreu um erro durante o login.
@@ -107,6 +110,11 @@
             const title = document.getElementById('dynamic-title');
             title.style.color = getRandomColor();
         }, 1000); // Altera a cor do título a cada 1 segundo
+
+        function logout() {
+            localStorage.removeItem('isAuthenticated');
+            window.location.href = "login.html";
+        }
     </script>
 </body>
 </html>
