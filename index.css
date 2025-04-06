@@ -85,6 +85,27 @@ footer {
     border: none; /* Adiciona uma borda ao redor da imagem (opcional) */
 }
 
+/* Estilo padrão para as imagens */
+.center img {
+    max-width: 100px; /* Define o tamanho máximo das imagens */
+    height: auto;
+    margin: 5px; /* Espaçamento entre as imagens */
+}
+
+/* Estilo responsivo para telas menores */
+@media (max-width: 768px) {
+    .center img {
+        max-width: 80px; /* Reduz o tamanho das imagens em telas menores */
+        margin: 5px; /* Mantém o espaçamento */
+    }
+
+    .center {
+        display: flex;
+        flex-wrap: wrap; /* Permite que as imagens fiquem lado a lado */
+        justify-content: center; /* Centraliza as imagens horizontalmente */
+    }
+}
+
 .audio-container {
     text-align: center;
 }
@@ -104,9 +125,21 @@ footer {
 }
 
 .logo {
-    width: 50px; /* Ajuste o tamanho conforme necessário */
+    width: 10px; /* Ajuste o tamanho conforme necessário */
     height: auto;
-    margin-bottom: -10px; /* Espaço entre a imagem e o texto */
+    margin-bottom: 0px; /* Espaço entre a imagem e o texto */
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;
+    margin-top: 20px; /* Espaçamento do topo */
+}
+
+.site-logo {
+    max-width: 150px; /* Ajuste o tamanho da logo */
+    height: auto;
 }
 
 .history-section {
@@ -418,58 +451,8 @@ audio {
     background-color: #0056b3;
 }
 
-// Função para gerar uma cor aleatória
-function getRandomColor() {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-}
 
-// Objeto para armazenar cores aleatórias para cada usuário
-const userColors = {};
-
-// Exibe mensagens em tempo real
-db.on("child_added", (snapshot) => {
-    const message = snapshot.val();
-    if (!message) {
-        console.error("Nenhuma mensagem encontrada.");
-        return;
-    }
-
-    console.log("Mensagem recebida:", message);
-
-    // Define uma cor aleatória para o usuário, se ainda não tiver uma
-    if (!userColors[message.user]) {
-        userColors[message.user] = getRandomColor();
-    }
-
-    // Cria o elemento da mensagem
-    const messageDiv = document.createElement("div");
-
-    // Adiciona o nome do usuário com a cor aleatória
-    const userNameSpan = document.createElement("span");
-    userNameSpan.textContent = `${message.user}: `;
-    userNameSpan.style.color = userColors[message.user];
-    userNameSpan.classList.add("user-name");
-
-    // Adiciona o texto da mensagem
-    const messageTextSpan = document.createElement("span");
-    messageTextSpan.textContent = message.text;
-
-    // Adiciona os elementos ao contêiner da mensagem
-    messageDiv.appendChild(userNameSpan);
-    messageDiv.appendChild(messageTextSpan);
-
-    // Adiciona a mensagem ao contêiner de mensagens
-    document.getElementById("chat-messages").appendChild(messageDiv);
-
-    // Rola para a última mensagem
-    const chatMessages = document.getElementById("chat-messages");
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-});
+/* Removed misplaced JavaScript code. Ensure JavaScript is moved to a separate file or script tag. */
 
 
 
