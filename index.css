@@ -125,7 +125,7 @@ footer {
 }
 
 .logo {
-    width: 10px; /* Ajuste o tamanho conforme necessário */
+    width: 60px; /* Ajuste o tamanho conforme necessário */
     height: auto;
     margin-bottom: 0px; /* Espaço entre a imagem e o texto */
 }
@@ -353,7 +353,7 @@ audio {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap; /* Permite que os logos quebrem linha */
-    gap: 20px; /* Espaçamento entre os logos */
+    gap: 80px; /* Espaçamento entre os logos */
 }
 
 .supporter-logo {
