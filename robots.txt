@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+<meta name="robots" content="noindex">
