@@ -461,7 +461,7 @@ audio {
 
 .contador img {
     max-width: 100px; /* Ajusta o tamanho do contador */
-    border-radius: 10px; /* Dá bordas arredondadas */
+    border-radius: 0px; /* Dá bordas arredondadas */
 }
 img {
   border-radius: 0px; /* Remove qualquer arredondamento */
