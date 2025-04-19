@@ -454,5 +454,14 @@ audio {
 
 /* Removed misplaced JavaScript code. Ensure JavaScript is moved to a separate file or script tag. */
 
+.contador {
+    text-align: center;
+    margin: 20px 0;
+}
 
+.contador img {
+    max-width: 100px; /* Ajusta o tamanho do contador */
+    border-radius: 10px; /* Dá bordas arredondadas */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Efeito de sombra */
+}
 
