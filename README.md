@@ -1,2 +1,5 @@
 projeto do site para meu evento
-refeito quase tudo agora e so repostar
+100% 
+tudo pronto para 
+site ok e online
+paginas revisadas
