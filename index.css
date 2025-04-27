@@ -468,4 +468,31 @@ img {
   border: none; /* Remove borda */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Efeito de sombra */
 }
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px; /* Espaçamento entre os botões */
+    margin: 20px 0;
+}
 
+.nav-buttons button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar os botões */
+}
+
+.nav-buttons button:hover {
+    background-color: #0056b3; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.nav-buttons button:active {
+    transform: scale(0.95); /* Efeito ao clicar */
+}
