@@ -472,8 +472,8 @@ img {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px; /* Espaçamento entre os botões */
-    margin: 20px 0;
+    gap: 18px;
+    margin: 30px 0;
 }
 
 .nav-buttons button {
@@ -495,4 +495,161 @@ img {
 
 .nav-buttons button:active {
     transform: scale(0.95); /* Efeito ao clicar */
+}
+
+.arcade-btn {
+    background: linear-gradient(90deg, #ff004f 0%, #ffb300 100%);
+    color: #fff;
+    font-family: 'Press Start 2P', 'Arial Black', Arial, sans-serif;
+    font-size: 18px;
+    padding: 20px 36px;
+    border: 4px solid #fff700;
+    border-radius: 20px;
+    box-shadow:
+        0 8px 0 #b30000,
+        0 16px 32px rgba(0,0,0,0.35),
+        0 0 16px #fff70088;
+    text-shadow:
+        2px 2px 0 #000,
+        0 0 8px #fff700,
+        0 0 2px #fff;
+    cursor: pointer;
+    transition:
+        transform 0.1s,
+        box-shadow 0.2s,
+        background 0.3s,
+        border-color 0.3s;
+    outline: none;
+    margin-bottom: 14px;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+.arcade-btn::after {
+    content: "";
+    position: absolute;
+    top: -60%;
+    left: -60%;
+    width: 220%;
+    height: 220%;
+    background: linear-gradient(120deg, transparent 40%, #fff70055 50%, transparent 60%);
+    transform: rotate(25deg);
+    opacity: 0.8;
+    pointer-events: none;
+    animation: arcade-glow 2.5s linear infinite;
+}
+
+@keyframes arcade-glow {
+    0% { left: -100%; }
+    100% { left: 120%; }
+}
+
+.arcade-btn:hover, .arcade-btn:focus {
+    background: linear-gradient(90deg, #ffb300 0%, #ff004f 100%);
+    color: #fff700;
+    transform: translateY(-6px) scale(1.07);
+    box-shadow:
+        0 16px 32px #ff004f80,
+        0 4px 16px #000,
+        0 0 24px #fff700cc;
+    border-color: #ff004f;
+}
+
+.arcade-btn:active {
+    transform: scale(0.96);
+    box-shadow: 0 2px 4px #b30000;
+}
+
+.arcade-image-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background: linear-gradient(90deg, #ff004f 0%, #ffb300 100%);
+    color: #fff;
+    font-family: 'Press Start 2P', 'Arial Black', Arial, sans-serif;
+    font-size: 18px;
+    padding: 18px 36px;
+    border: 4px solid #fff700;
+    border-radius: 24px;
+    box-shadow: 0 8px 0 #b30000, 0 16px 32px rgba(0,0,0,0.35), 0 0 16px #fff70088;
+    text-shadow: 2px 2px 0 #000, 0 0 8px #fff700, 0 0 2px #fff;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.2s, background 0.3s, border-color 0.3s;
+    outline: none;
+    margin: 20px auto;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+.arcade-image-btn:hover, .arcade-image-btn:focus {
+    background: linear-gradient(90deg, #ffb300 0%, #ff004f 100%);
+    color: #fff700;
+    transform: translateY(-6px) scale(1.07);
+    box-shadow: 0 16px 32px #ff004f80, 0 4px 16px #000, 0 0 24px #fff700cc;
+    border-color: #ff004f;
+}
+
+.arcade-image-btn:active {
+    transform: scale(0.96);
+    box-shadow: 0 2px 4px #b30000;
+}
+
+.arcade-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.arcade-photo-btn {
+    position: relative;
+    display: inline-block;
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.1s, box-shadow 0.2s;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4), 0 2px 8px #ffb300;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.arcade-photo-btn:hover {
+    transform: scale(1.04) translateY(-4px);
+    box-shadow: 0 16px 32px #ff004f80, 0 4px 16px #000, 0 0 24px #fff700cc;
+}
+
+.arcade-photo-img {
+    display: block;
+    width: 260px; /* ajuste conforme necessário */
+    height: auto;
+    border-radius: 24px;
+    filter: brightness(0.95) contrast(1.1);
+}
+
+.arcade-photo-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    color: #fff700;
+    font-family: 'Press Start 2P', 'Arial Black', Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    text-shadow:
+        2px 2px 0 #000,
+        0 0 8px #ff004f,
+        0 0 2px #fff;
+    letter-spacing: 1px;
+    pointer-events: none;
+    line-height: 1.2;
+    background: rgba(0,0,0,0.25); /* leve fundo para destacar o texto */
+    border-radius: 12px;
+    padding: 8px 0;
 }

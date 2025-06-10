@@ -147,6 +147,80 @@
         .back-button:hover {
             background-color: #0056b3;
         }
+
+        .arcade-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .arcade-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .arcade-image-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .arcade-image-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .arcade-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .arcade-photo-btn {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 5px;
+            transition: background-color 0.3s;
+            text-align: center;
+        }
+
+        .arcade-photo-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .arcade-photo-img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 5px;
+        }
+
+        .arcade-photo-title {
+            font-size: 14px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgb(161, 221, 241);
+        }
     </style>
 
     <!-- Firebase App (necessário para inicializar o Firebase) -->
@@ -186,13 +260,13 @@
     <button onclick="logout()">Logout</button>
 
 <div class="nav-buttons">
-    <button onclick="window.location.href='inicio.html'">INICIO</button>
-    <button onclick="window.location.href='galeria.html'">GALERIA</button>
-    <button onclick="window.location.href='musicas.html'">MÚSICAS</button>
-    <button onclick="window.location.href='videos.html'">VÍDEOS</button>
-    <button onclick="window.location.href='pesquisa.html'">PESQUISA</button>
-    <button onclick="window.location.href='inscrissoes.html'">INSCRIÇÕES</button>
-    <button onclick="window.location.href='iflame.html'">JOGOS RETRO ON LINE</button>
+    <button class="arcade-btn" onclick="window.location.href='inicio.html'">INICIO</button>
+    <button class="arcade-btn" onclick="window.location.href='galeria.html'">GALERIA</button>
+    <button class="arcade-btn" onclick="window.location.href='musicas.html'">MÚSICAS</button>
+    <button class="arcade-btn" onclick="window.location.href='videos.html'">VÍDEOS</button>
+    <button class="arcade-btn" onclick="window.location.href='pesquisa.html'">PESQUISA</button>
+    <button class="arcade-btn" onclick="window.location.href='inscrissoes.html'">INSCRIÇÕES</button>
+    <button class="arcade-btn" onclick="window.location.href='iflame.html'">JOGOS RETRO ON LINE</button>
 </div>
 
     <div class="center">
@@ -333,7 +407,7 @@
         <div class="sponsors">
             <h2>Patrocinadores</h2>
             <div class="sponsor-logos">
-                <img src="./img/patrocinadores/sponsor1.png" alt="Patrocinador 1" class="sponsor-logo">
+                <img src="./img/patrocinadores/Logo.ELM-1.png" alt="Patrocinador 1" class="sponsor-logo">
                 <img src="./img/patrocinadores/sponsor1.png" alt="Patrocinador 2" class="sponsor-logo">
                 <img src="./img/patrocinadores/sponsor1.png" alt="Patrocinador 3" class="sponsor-logo">
                 <img src="./img/patrocinadores/sponsor1.png" alt="Patrocinador 4" class="sponsor-logo">
